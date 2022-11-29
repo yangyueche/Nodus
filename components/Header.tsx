@@ -1,5 +1,5 @@
-import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import {
   ArrowPathIcon,
   Bars3Icon,
@@ -14,8 +14,8 @@ import {
   Squares2X2Icon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import Link from 'next/link'
+import { Fragment } from 'react'
 
 const solutions = [
   {
@@ -96,14 +96,12 @@ export default function Example() {
         <div className="flex items-center justify-between border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link href="/">
-              <a>
-                <span className="sr-only">Your Company</span>
-                <img
-                  className="h-8 w-auto sm:h-10"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                  alt=""
-                />
-              </a>
+              <span className="sr-only">Your Company</span>
+              <img
+                className="h-8 w-auto sm:h-10"
+                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                alt=""
+              />
             </Link>
           </div>
           <div className="-my-2 -mr-2 md:hidden">
@@ -273,10 +271,11 @@ export default function Example() {
             </Popover>
           </Popover.Group>
           <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-            <Link href="/login">
-              <a className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
-                Sign in
-              </a>
+            <Link
+              href="/login"
+              className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+            >
+              Sign in
             </Link>
             <a
               href="#"
